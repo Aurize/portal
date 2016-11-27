@@ -12,5 +12,3 @@ Route::get('/home', function () {
 
 
 Route::resource('admins', 'AdminController');
-
-
