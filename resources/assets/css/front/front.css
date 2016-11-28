@@ -11,7 +11,7 @@
 }
 
 body{
-    background-color: #FFF;
+    background-color: #e6e6e6;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -234,6 +234,11 @@ a, a:hover, a:focus{
 
 .PromotedOffers{
     margin-top: -100px;
+    padding-bottom: 25px;
+}
+
+.PromotedOffers > .container > .row:first-child{
+    margin-bottom: 15px;
 }
 
 .PromotedOffers__sectionTitle{
@@ -266,6 +271,166 @@ a, a:hover, a:focus{
 .PromotedOffers__offer{
     background-color: #FFF;
     padding: 10px;
+}
+
+.PromotedOffers__offer__imageWrapper{
+    position: relative;
+}
+
+.PromotedOffers__offer__imageWrapper img{
+    max-width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.PromotedOffers__offer__imageWrapper__cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 7, 21, 0.1);
+    z-index: 5;
+}
+
+.PromotedOffers__offer__imageWrapper__tag{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ca0b23;
+    padding: 3px 2px 3px 7px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.PromotedOffers__offer__imageWrapper__tag:after{
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 20px;
+    height: 25px;
+    content: ' ';
+    background-image: url('/img/elements/triangle-tag.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.PromotedOffers__offer__companyLogoWrapper{
+    margin: -55px auto 0 auto;
+    width: 110px;
+    height: 110px;
+    border: 5px solid #FFF;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #FFF;
+    position: relative;
+    z-index: 15;
+    margin-bottom: 15px;
+}
+
+.PromotedOffers__offer__companyLogo__background{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.PromotedOffers__offer__companyLogo__background--black{
+    background-color: #000;
+}
+
+.PromotedOffers__offer__companyLogo__background--white{
+    background-color: #FFF;
+    border: 1px solid #cacaca;
+}
+
+.PromotedOffers__offer__companyLogo__background--red{
+    background-color: #ce0809;
+}
+
+.PromotedOffers__offer__companyLogo__background img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.PromotedOffers__offer__title{
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.PromotedOffers__offer__address{
+    text-align: center;
+    color: rgba(2, 7, 21, .6);
+    margin-bottom: 15px;
+}
+
+.PromotedOffers__offer__calendar{
+    color: #0e2f86;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.PromotedOffers__offer__calendar:before{
+    display: inline-block;
+    width: 19px;
+    height: 20px;
+    content: ' ';
+    background-image: url('/img/icons/calendar.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    vertical-align: -3px;
+    margin-right: 7px;
+}
+
+.PromotedOffers__offer__reviews{
+    text-align: right;
+}
+
+.Stars{
+    display: inline-block;
+}
+
+.Stars__star{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+
+.Stars__star:before{
+    font-family: FontAwesome;
+    content: ' ';
+    display: block;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+.Stars__star--full:before{
+    content: "\f005";
+}
+
+.Stars__star--half:before{
+    content: "\f123";
+}
+
+.Stars__star--empty:before{
+    content: "\f006";
+}
+
+.PromotedOffers__offer__reviews p{
+    color: rgba(2, 7, 21, .6);
+    font-size: 12px;
 }
 
 @media(min-width: 1200px){

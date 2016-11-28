@@ -61,7 +61,7 @@
                                 <div class="PromotedOffers__offer__imageWrapper">
                                     <img src="/img/elements/promoted-offer1.jpg" alt="">
                                     <div class="PromotedOffers__offer__imageWrapper__cover"></div>
-                                    <div class="PromotedOffers__offer__imageWrapper__tag">FITNESS</div>
+                                    <div class="PromotedOffers__offer__imageWrapper__tag">Fitness</div>
                                 </div>
                                 <div class="PromotedOffers__offer__companyLogoWrapper">
                                     <div class="PromotedOffers__offer__companyLogo__background PromotedOffers__offer__companyLogo__background--black">
@@ -87,7 +87,124 @@
                                                 <span class="Stars__star Stars__star--full"></span>
                                                 <span class="Stars__star Stars__star--full"></span>
                                                 <span class="Stars__star Stars__star--half"></span>
-                                                <span class="Stars__star Stars__star--none"></span>
+                                                <span class="Stars__star Stars__star--empty"></span>
+                                            </div>
+                                            <p>(30 opinii)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="PromotedOffers__offer">
+                                <div class="PromotedOffers__offer__imageWrapper">
+                                    <img src="/img/elements/promoted-offer2.jpg" alt="">
+                                    <div class="PromotedOffers__offer__imageWrapper__cover"></div>
+                                    <div class="PromotedOffers__offer__imageWrapper__tag">Sport</div>
+                                </div>
+                                <div class="PromotedOffers__offer__companyLogoWrapper">
+                                    <div class="PromotedOffers__offer__companyLogo__background PromotedOffers__offer__companyLogo__background--white">
+                                        <img src="/img/elements/evergym.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="PromotedOffers__offer__title">
+                                    Fit Fabric Fitness Club
+                                </div>
+                                <div class="PromotedOffers__offer__address">
+                                    al. 1 Maja 119/121
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="PromotedOffers__offer__calendar">
+                                            Grafik zajęć
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="PromotedOffers__offer__reviews">
+                                            <div class="Stars">
+                                                <span class="Stars__star Stars__star--full"></span>
+                                                <span class="Stars__star Stars__star--full"></span>
+                                                <span class="Stars__star Stars__star--half"></span>
+                                                <span class="Stars__star Stars__star--empty"></span>
+                                                <span class="Stars__star Stars__star--empty"></span>
+                                            </div>
+                                            <p>(30 opinii)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="PromotedOffers__offer">
+                                <div class="PromotedOffers__offer__imageWrapper">
+                                    <img src="/img/elements/promoted-offer3.jpg" alt="">
+                                    <div class="PromotedOffers__offer__imageWrapper__cover"></div>
+                                    <div class="PromotedOffers__offer__imageWrapper__tag">Rekreacja</div>
+                                </div>
+                                <div class="PromotedOffers__offer__companyLogoWrapper">
+                                    <div class="PromotedOffers__offer__companyLogo__background PromotedOffers__offer__companyLogo__background--red">
+                                        <img src="/img/elements/jatomi.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="PromotedOffers__offer__title">
+                                    Fit Fabric Fitness Club
+                                </div>
+                                <div class="PromotedOffers__offer__address">
+                                    al. 1 Maja 119/121
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="PromotedOffers__offer__calendar">
+                                            Grafik zajęć
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="PromotedOffers__offer__reviews">
+                                            <div class="Stars">
+                                                <span class="Stars__star Stars__star--full"></span>
+                                                <span class="Stars__star Stars__star--empty"></span>
+                                                <span class="Stars__star Stars__star--empty"></span>
+                                                <span class="Stars__star Stars__star--empty"></span>
+                                                <span class="Stars__star Stars__star--empty"></span>
+                                            </div>
+                                            <p>(30 opinii)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="PromotedOffers__offer">
+                                <div class="PromotedOffers__offer__imageWrapper">
+                                    <img src="/img/elements/promoted-offer4.jpg" alt="">
+                                    <div class="PromotedOffers__offer__imageWrapper__cover"></div>
+                                    <div class="PromotedOffers__offer__imageWrapper__tag">Taniec</div>
+                                </div>
+                                <div class="PromotedOffers__offer__companyLogoWrapper">
+                                    <div class="PromotedOffers__offer__companyLogo__background PromotedOffers__offer__companyLogo__background--white">
+                                        <img src="/img/elements/sportera.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="PromotedOffers__offer__title">
+                                    Fit Fabric Fitness Club
+                                </div>
+                                <div class="PromotedOffers__offer__address">
+                                    al. 1 Maja 119/121
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="PromotedOffers__offer__calendar">
+                                            Grafik zajęć
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="PromotedOffers__offer__reviews">
+                                            <div class="Stars">
+                                                <span class="Stars__star Stars__star--full"></span>
+                                                <span class="Stars__star Stars__star--full"></span>
+                                                <span class="Stars__star Stars__star--full"></span>
+                                                <span class="Stars__star Stars__star--full"></span>
+                                                <span class="Stars__star Stars__star--empty"></span>
                                             </div>
                                             <p>(30 opinii)</p>
                                         </div>
