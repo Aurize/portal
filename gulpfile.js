@@ -54,6 +54,7 @@ elixir(mix => {
 
     .styles([
         './resources/dist/css/front.css',
+        './resources/assets/css/front/front.css',
     ], paths.public + 'css/front.css')
 
     .scripts([
