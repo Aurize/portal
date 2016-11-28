@@ -16,6 +16,7 @@ class CreatePlacesTable extends Migration
             $table->increments('id');
             $table->integer('company_id')->unsgined();
             $table->string('name');
+            $table->string('slug');
             $table->timestamps();
         });
     }

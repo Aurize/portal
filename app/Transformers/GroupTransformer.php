@@ -6,15 +6,15 @@ namespace App\Transformers;
 class GroupTransformer extends Transformer
 {
     /**
-     * @param $visit
+     * @param $rate
      * @param array $relationships
      * @return mixed
      */
-    public function transform($visit, $relationships = [])
+    public function transform($rate, $relationships = [])
     {
         return [
-            'id' => $visit->id,
-            'name' => $visit->name,
+            'id' => $rate->id,
+            'name' => $rate->name,
         ];
     }
 }

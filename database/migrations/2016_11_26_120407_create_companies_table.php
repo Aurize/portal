@@ -16,6 +16,7 @@ class CreateCompaniesTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsgined();
             $table->string('name');
+            $table->string('slug');
             $table->timestamps();
         });
     }

@@ -2,24 +2,24 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Offer;
-use App\Transformers\OfferTransformer;
+use App\Category;
+use App\Transformers\CategoryTransformer;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class OfferController extends ApiController
+class CategoryController extends ApiController
 {
     /**
-     * @var OfferTransformer
+     * @var CategoryTransformer
      */
     protected $transformer;
 
     /**
-     * OfferController constructor.
+     * CategoryController constructor.
      * @param $transformer
      */
-    public function __construct(OfferTransformer $transformer)
+    public function __construct(CategoryTransformer $transformer)
     {
         $this->transformer = $transformer;
     }
@@ -31,10 +31,10 @@ class OfferController extends ApiController
      */
     public function index()
     {
-        $offers = Offer::all();
+        $categories = Category::all();
 
         return $this->respond([
-            'data' => $this->transformer->transformCollection($offers)
+            'data' => $this->transformer->transformCollection($categories)
         ]);
     }
 
@@ -46,7 +46,7 @@ class OfferController extends ApiController
      */
     public function store(Request $request)
     {
-        Offer::create($request->all());
+        Category::create($request->all());
 
         return $this->respondOK();
     }
@@ -54,13 +54,13 @@ class OfferController extends ApiController
     /**
      * Display the specified resource.
      *
-     * @param Offer $offer
+     * @param Category $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Offer $offer)
+    public function show(Category $category)
     {
         return $this->respond([
-            'data' => $this->transformer->transform($offer)
+            'data' => $this->transformer->transform($category)
         ]);
     }
 
@@ -68,12 +68,12 @@ class OfferController extends ApiController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param Offer $offer
+     * @param Category $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Offer $offer)
+    public function update(Request $request, Category $category)
     {
-        $offer->update($request->all());
+        $category->update($request->all());
 
         return $this->respondOK();
     }
@@ -81,12 +81,12 @@ class OfferController extends ApiController
     /**
      * Remove the specified resource from storage.
      *
-     * @param Offer $offer
+     * @param Category $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Offer $offer)
+    public function destroy(Category $category)
     {
-        $offer->delete();
+        $category->delete();
 
         return $this->respondOK();
     }

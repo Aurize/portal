@@ -2,24 +2,24 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Offer;
-use App\Transformers\OfferTransformer;
+use App\Group;
+use App\Transformers\GroupTransformer;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class OfferController extends ApiController
+class GroupController extends ApiController
 {
     /**
-     * @var OfferTransformer
+     * @var GroupTransformer
      */
     protected $transformer;
 
     /**
-     * OfferController constructor.
+     * GroupController constructor.
      * @param $transformer
      */
-    public function __construct(OfferTransformer $transformer)
+    public function __construct(GroupTransformer $transformer)
     {
         $this->transformer = $transformer;
     }
@@ -31,10 +31,10 @@ class OfferController extends ApiController
      */
     public function index()
     {
-        $offers = Offer::all();
+        $groups = Group::all();
 
         return $this->respond([
-            'data' => $this->transformer->transformCollection($offers)
+            'data' => $this->transformer->transformCollection($groups)
         ]);
     }
 
@@ -46,7 +46,7 @@ class OfferController extends ApiController
      */
     public function store(Request $request)
     {
-        Offer::create($request->all());
+        Group::create($request->all());
 
         return $this->respondOK();
     }
@@ -54,13 +54,13 @@ class OfferController extends ApiController
     /**
      * Display the specified resource.
      *
-     * @param Offer $offer
+     * @param Group $group
      * @return \Illuminate\Http\Response
      */
-    public function show(Offer $offer)
+    public function show(Group $group)
     {
         return $this->respond([
-            'data' => $this->transformer->transform($offer)
+            'data' => $this->transformer->transform($group)
         ]);
     }
 
@@ -68,12 +68,12 @@ class OfferController extends ApiController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param Offer $offer
+     * @param Group $group
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Offer $offer)
+    public function update(Request $request, Group $group)
     {
-        $offer->update($request->all());
+        $group->update($request->all());
 
         return $this->respondOK();
     }
@@ -81,12 +81,12 @@ class OfferController extends ApiController
     /**
      * Remove the specified resource from storage.
      *
-     * @param Offer $offer
+     * @param Group $group
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Offer $offer)
+    public function destroy(Group $group)
     {
-        $offer->delete();
+        $group->delete();
 
         return $this->respondOK();
     }

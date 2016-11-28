@@ -2,24 +2,24 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Offer;
-use App\Transformers\OfferTransformer;
+use App\Visit;
+use App\Transformers\VisitTransformer;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class OfferController extends ApiController
+class VisitController extends ApiController
 {
     /**
-     * @var OfferTransformer
+     * @var VisitTransformer
      */
     protected $transformer;
 
     /**
-     * OfferController constructor.
+     * VisitController constructor.
      * @param $transformer
      */
-    public function __construct(OfferTransformer $transformer)
+    public function __construct(VisitTransformer $transformer)
     {
         $this->transformer = $transformer;
     }
@@ -31,10 +31,10 @@ class OfferController extends ApiController
      */
     public function index()
     {
-        $offers = Offer::all();
+        $visits = Visit::all();
 
         return $this->respond([
-            'data' => $this->transformer->transformCollection($offers)
+            'data' => $this->transformer->transformCollection($visits)
         ]);
     }
 
@@ -46,7 +46,7 @@ class OfferController extends ApiController
      */
     public function store(Request $request)
     {
-        Offer::create($request->all());
+        Visit::create($request->all());
 
         return $this->respondOK();
     }
@@ -54,13 +54,13 @@ class OfferController extends ApiController
     /**
      * Display the specified resource.
      *
-     * @param Offer $offer
+     * @param Visit $visit
      * @return \Illuminate\Http\Response
      */
-    public function show(Offer $offer)
+    public function show(Visit $visit)
     {
         return $this->respond([
-            'data' => $this->transformer->transform($offer)
+            'data' => $this->transformer->transform($visit)
         ]);
     }
 
@@ -68,12 +68,12 @@ class OfferController extends ApiController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param Offer $offer
+     * @param Visit $visit
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Offer $offer)
+    public function update(Request $request, Visit $visit)
     {
-        $offer->update($request->all());
+        $visit->update($request->all());
 
         return $this->respondOK();
     }
@@ -81,12 +81,12 @@ class OfferController extends ApiController
     /**
      * Remove the specified resource from storage.
      *
-     * @param Offer $offer
+     * @param Visit $visit
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Offer $offer)
+    public function destroy(Visit $visit)
     {
-        $offer->delete();
+        $visit->delete();
 
         return $this->respondOK();
     }

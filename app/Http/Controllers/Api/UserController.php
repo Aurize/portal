@@ -2,24 +2,24 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Offer;
-use App\Transformers\OfferTransformer;
+use App\User;
+use App\Transformers\UserTransformer;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class OfferController extends ApiController
+class UserController extends ApiController
 {
     /**
-     * @var OfferTransformer
+     * @var UserTransformer
      */
     protected $transformer;
 
     /**
-     * OfferController constructor.
+     * UserController constructor.
      * @param $transformer
      */
-    public function __construct(OfferTransformer $transformer)
+    public function __construct(UserTransformer $transformer)
     {
         $this->transformer = $transformer;
     }
@@ -31,10 +31,10 @@ class OfferController extends ApiController
      */
     public function index()
     {
-        $offers = Offer::all();
+        $users = User::all();
 
         return $this->respond([
-            'data' => $this->transformer->transformCollection($offers)
+            'data' => $this->transformer->transformCollection($users)
         ]);
     }
 
@@ -46,7 +46,7 @@ class OfferController extends ApiController
      */
     public function store(Request $request)
     {
-        Offer::create($request->all());
+        User::create($request->all());
 
         return $this->respondOK();
     }
@@ -54,13 +54,13 @@ class OfferController extends ApiController
     /**
      * Display the specified resource.
      *
-     * @param Offer $offer
+     * @param User $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Offer $offer)
+    public function show(User $user)
     {
         return $this->respond([
-            'data' => $this->transformer->transform($offer)
+            'data' => $this->transformer->transform($user)
         ]);
     }
 
@@ -68,12 +68,12 @@ class OfferController extends ApiController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param Offer $offer
+     * @param User $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Offer $offer)
+    public function update(Request $request, User $user)
     {
-        $offer->update($request->all());
+        $user->update($request->all());
 
         return $this->respondOK();
     }
@@ -81,12 +81,12 @@ class OfferController extends ApiController
     /**
      * Remove the specified resource from storage.
      *
-     * @param Offer $offer
+     * @param User $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Offer $offer)
+    public function destroy(User $user)
     {
-        $offer->delete();
+        $user->delete();
 
         return $this->respondOK();
     }

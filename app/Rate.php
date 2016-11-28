@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Offer extends Model
+class Rate extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -14,8 +14,8 @@ class Offer extends Model
     protected $fillable = [
         'place_id',
         'category_id',
-        'name',
-        'slug',
+        'title',
+        'comment',
     ];
 
     public function place()
@@ -26,10 +26,5 @@ class Offer extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
-    }
-
-    public function groups()
-    {
-        return $this->hasMany(Group::class);
     }
 }

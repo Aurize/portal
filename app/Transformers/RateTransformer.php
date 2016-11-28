@@ -3,7 +3,7 @@
 namespace App\Transformers;
 
 
-class VisitTransformer extends Transformer
+class RateTransformer extends Transformer
 {
     /**
      * @param $rate
@@ -13,8 +13,10 @@ class VisitTransformer extends Transformer
     public function transform($rate, $relationships = [])
     {
         return [
-            'id' => $rate->id,
-            'name' => $rate->name,
+            'place_id' => $rate->place_id,
+            'category_id' => $rate->category_id,
+            'title' => $rate->title,
+            'comment' => $rate->comment,
         ];
     }
 }

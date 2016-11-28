@@ -14,10 +14,16 @@ class Category extends Model
     protected $fillable = [
         'name',
         'type',
+        'slug',
     ];
 
     public function offers()
     {
         return $this->hasMany(Offer::class);
+    }
+
+    public function rates()
+    {
+        return $this->hasMany(Rate::class);
     }
 }
