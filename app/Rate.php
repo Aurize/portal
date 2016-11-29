@@ -12,8 +12,7 @@ class Rate extends Model
      * @var array
      */
     protected $fillable = [
-        'place_id',
-        'category_id',
+        'offer_id',
         'title',
         'comment',
     ];

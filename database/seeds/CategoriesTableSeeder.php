@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CategoryTableSeeder extends Seeder
+class CategoriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,48 +12,51 @@ class CategoryTableSeeder extends Seeder
     public function run()
     {
         \App\Category::create([
-            'category_id' => 1,
-            'name' => 'Wrapper'
-        ]);
-
-        \App\Category::create([
-            'category_id' => 1,
-            'name' => 'Main'
+            'category_id' => 0,
+            'name' => 'Main',
+            'slug' => 'main',
         ]);
 
         \App\Category::create([
             'category_id' => 2,
-            'name' => 'Sport'
+            'name' => 'Sport',
+            'slug' => 'sport',
         ]);
 
         \App\Category::create([
             'category_id' => 2,
-            'name' => 'Taniec'
+            'name' => 'Taniec',
+            'slug' => 'taniec',
         ]);
 
         \App\Category::create([
             'category_id' => 2,
-            'name' => 'Rekreacja'
+            'name' => 'Rekreacja',
+            'slug' => 'rekreacja',
         ]);
 
         \App\Category::create([
             'category_id' => 2,
-            'name' => 'Fitness'
+            'name' => 'Fitness',
+            'slug' => 'fitness',
         ]);
 
         \App\Category::create([
             'category_id' => 2,
-            'name' => 'Uroda'
+            'name' => 'Uroda',
+            'slug' => 'uroda',
         ]);
 
         \App\Category::create([
             'category_id' => 2,
-            'name' => 'Edukacja'
+            'name' => 'Edukacja',
+            'slug' => 'edukacja',
         ]);
 
         \App\Category::create([
             'category_id' => 2,
-            'name' => 'Muzyka'
+            'name' => 'Muzyka',
+            'slug' => 'muzyka',
         ]);
     }
 }
