@@ -23,3 +23,4 @@ Route::resource('places', 'PlaceController');
 Route::resource('offers', 'OfferController');
 Route::resource('users', 'UserController');
 Route::resource('groups', 'GroupController');
+Route::resource('reviews', 'ReviewController');
