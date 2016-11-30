@@ -32,4 +32,9 @@ class Offer extends Model
     {
         return $this->hasMany(Group::class);
     }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }

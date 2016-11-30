@@ -13,8 +13,7 @@ class ReviewTransformer extends Transformer
     public function transform($review, $relationships = [])
     {
         return [
-            'place_id' => $review->place_id,
-            'category_id' => $review->category_id,
+            'offer_id' => $review->offer_id,
             'title' => $review->title,
             'comment' => $review->comment,
         ];
