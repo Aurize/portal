@@ -2,24 +2,24 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Rate;
-use App\Transformers\RateTransformer;
+use App\Review;
+use App\Transformers\ReviewTransformer;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class RateController extends ApiController
+class ReviewController extends ApiController
 {
     /**
-     * @var RateTransformer
+     * @var ReviewTransformer
      */
     protected $transformer;
 
     /**
-     * RateController constructor.
+     * ReviewController constructor.
      * @param $transformer
      */
-    public function __construct(RateTransformer $transformer)
+    public function __construct(ReviewTransformer $transformer)
     {
         $this->transformer = $transformer;
     }
@@ -31,10 +31,10 @@ class RateController extends ApiController
      */
     public function index()
     {
-        $rates = Rate::all();
+        $reviews = Review::all();
 
         return $this->respond([
-            'data' => $this->transformer->transformCollection($rates)
+            'data' => $this->transformer->transformCollection($reviews)
         ]);
     }
 
@@ -46,7 +46,7 @@ class RateController extends ApiController
      */
     public function store(Request $request)
     {
-        Rate::create($request->all());
+        Review::create($request->all());
 
         return $this->respondOK();
     }
@@ -54,13 +54,13 @@ class RateController extends ApiController
     /**
      * Display the specified resource.
      *
-     * @param Rate $rate
+     * @param Review $review
      * @return \Illuminate\Http\Response
      */
-    public function show(Rate $rate)
+    public function show(Review $review)
     {
         return $this->respond([
-            'data' => $this->transformer->transform($rate)
+            'data' => $this->transformer->transform($review)
         ]);
     }
 
@@ -68,12 +68,12 @@ class RateController extends ApiController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param Rate $rate
+     * @param Review $review
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Rate $rate)
+    public function update(Request $request, Review $review)
     {
-        $rate->update($request->all());
+        $review->update($request->all());
 
         return $this->respondOK();
     }
@@ -81,12 +81,12 @@ class RateController extends ApiController
     /**
      * Remove the specified resource from storage.
      *
-     * @param Rate $rate
+     * @param Review $review
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Rate $rate)
+    public function destroy(Review $review)
     {
-        $rate->delete();
+        $review->delete();
 
         return $this->respondOK();
     }

@@ -3,7 +3,7 @@
 namespace App\Transformers;
 
 
-class GroupTransformer extends Transformer
+class ReviewTransformer extends Transformer
 {
     /**
      * @param $review
@@ -13,8 +13,10 @@ class GroupTransformer extends Transformer
     public function transform($review, $relationships = [])
     {
         return [
-            'id' => $review->id,
-            'name' => $review->name,
+            'place_id' => $review->place_id,
+            'category_id' => $review->category_id,
+            'title' => $review->title,
+            'comment' => $review->comment,
         ];
     }
 }

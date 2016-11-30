@@ -33,4 +33,4 @@ Route::group(['prefix' => 'admin'], function () {
   Route::get('/password/reset/{token}', 'AdminAuth\ResetPasswordController@showResetForm');
 });
 
-Route::resource('offers', 'Api\OfferController');
+Route::resource('offers', 'OfferController');

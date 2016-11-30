@@ -3,21 +3,27 @@
 @section('content')
     <div class="Middle">
         <header>
-            <div class="TopNav">
+            <div class="top-nav">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="TopNavText">
+                            <div class="top-nav__text">
                                 Wybierz<br />swoje hobby
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="AuthNav">
-                                <ul class="AuthNav__list">
+                            <div class="auth-nav">
+                                <ul class="auth-nav__list">
                                     @if (Auth::guest())
-                                        <li><a href="#" class="AuthNav--biznes">Dla biznesu</a></li>
-                                        <li><a href="{{ url('/login') }}">Logowanie</a></li>
-                                        <li><a href="{{ url('/register') }}">Rejestracja</a></li>
+                                        <li class="auth-nav__item">
+                                            <a href="#" class="auth-nav__link auth-nav__link--business">Dla biznesu</a>
+                                        </li>
+                                        <li class="auth-nav__item">
+                                            <a href="{{ url('/login') }}" class="auth-nav__link">Logowanie</a>
+                                        </li>
+                                        <li class="auth-nav__item">
+                                            <a href="{{ url('/register') }}" class="auth-nav__link">Rejestracja</a>
+                                        </li>
                                     @else
                                         <li>
                                             <form action="{{ url('/logout') }}" method="POST">
@@ -82,12 +88,12 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="PromotedOffers__offer__reviews">
-                                            <div class="Stars">
-                                                <span class="Stars__star Stars__star--full"></span>
-                                                <span class="Stars__star Stars__star--full"></span>
-                                                <span class="Stars__star Stars__star--full"></span>
-                                                <span class="Stars__star Stars__star--half"></span>
-                                                <span class="Stars__star Stars__star--empty"></span>
+                                            <div class="stars">
+                                                <span class="stars__star stars__star--full"></span>
+                                                <span class="stars__star stars__star--full"></span>
+                                                <span class="stars__star stars__star--full"></span>
+                                                <span class="stars__star stars__star--half"></span>
+                                                <span class="stars__star stars__star--empty"></span>
                                             </div>
                                             <p>(30 opinii)</p>
                                         </div>
@@ -121,12 +127,12 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="PromotedOffers__offer__reviews">
-                                            <div class="Stars">
-                                                <span class="Stars__star Stars__star--full"></span>
-                                                <span class="Stars__star Stars__star--full"></span>
-                                                <span class="Stars__star Stars__star--half"></span>
-                                                <span class="Stars__star Stars__star--empty"></span>
-                                                <span class="Stars__star Stars__star--empty"></span>
+                                            <div class="stars">
+                                                <span class="stars__star stars__star--full"></span>
+                                                <span class="stars__star stars__star--full"></span>
+                                                <span class="stars__star stars__star--half"></span>
+                                                <span class="stars__star stars__star--empty"></span>
+                                                <span class="stars__star stars__star--empty"></span>
                                             </div>
                                             <p>(30 opinii)</p>
                                         </div>
@@ -160,12 +166,12 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="PromotedOffers__offer__reviews">
-                                            <div class="Stars">
-                                                <span class="Stars__star Stars__star--full"></span>
-                                                <span class="Stars__star Stars__star--empty"></span>
-                                                <span class="Stars__star Stars__star--empty"></span>
-                                                <span class="Stars__star Stars__star--empty"></span>
-                                                <span class="Stars__star Stars__star--empty"></span>
+                                            <div class="stars">
+                                                <span class="stars__star stars__star--full"></span>
+                                                <span class="stars__star stars__star--empty"></span>
+                                                <span class="stars__star stars__star--empty"></span>
+                                                <span class="stars__star stars__star--empty"></span>
+                                                <span class="stars__star stars__star--empty"></span>
                                             </div>
                                             <p>(30 opinii)</p>
                                         </div>
@@ -199,12 +205,12 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="PromotedOffers__offer__reviews">
-                                            <div class="Stars">
-                                                <span class="Stars__star Stars__star--full"></span>
-                                                <span class="Stars__star Stars__star--full"></span>
-                                                <span class="Stars__star Stars__star--full"></span>
-                                                <span class="Stars__star Stars__star--full"></span>
-                                                <span class="Stars__star Stars__star--empty"></span>
+                                            <div class="stars">
+                                                <span class="stars__star stars__star--full"></span>
+                                                <span class="stars__star stars__star--full"></span>
+                                                <span class="stars__star stars__star--full"></span>
+                                                <span class="stars__star stars__star--full"></span>
+                                                <span class="stars__star stars__star--empty"></span>
                                             </div>
                                             <p>(30 opinii)</p>
                                         </div>

@@ -16,7 +16,7 @@ class OffersTableSeeder extends Seeder
                 'offer_id' => $offer->id
             ]);
 
-            factory(\App\Rate::class, rand(5, 10))->create([
+            factory(\App\Review::class, rand(5, 10))->create([
                 'offer_id' => $offer->id,
             ]);
         });

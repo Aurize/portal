@@ -62,7 +62,7 @@ $factory->define(App\Group::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Rate::class, function (Faker\Generator $faker) {
+$factory->define(App\Review::class, function (Faker\Generator $faker) {
     return [
         'offer_id' => \App\Offer::all()->random()->id,
         'rate' => $faker->numberBetween(1,10),

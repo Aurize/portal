@@ -18,7 +18,7 @@ return [
     |
     |
     */
-    'default_layout' => 'admin',
+    'default_layout' => 'front',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     | This is the name of template which is generated during view:make command.
     |
     */
-    'default_controller_template' => 'api',
+    'default_controller_template' => 'default',
 
     /*
     |--------------------------------------------------------------------------
@@ -100,7 +100,7 @@ return [
     | the role if it is in a different namespace.
     |
     */
-    'controller_namespace' => 'Api',
+    'controller_namespace' => '',
 
     /*
     |--------------------------------------------------------------------------

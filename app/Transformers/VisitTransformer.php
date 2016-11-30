@@ -6,15 +6,15 @@ namespace App\Transformers;
 class VisitTransformer extends Transformer
 {
     /**
-     * @param $rate
+     * @param $review
      * @param array $relationships
      * @return mixed
      */
-    public function transform($rate, $relationships = [])
+    public function transform($review, $relationships = [])
     {
         return [
-            'id' => $rate->id,
-            'name' => $rate->name,
+            'id' => $review->id,
+            'name' => $review->name,
         ];
     }
 }

@@ -22,8 +22,8 @@ class Category extends Model
         return $this->hasMany(Offer::class);
     }
 
-    public function rates()
+    public function reviews()
     {
-        return $this->hasMany(Rate::class);
+        return $this->hasMany(Review::class);
     }
 }

@@ -16,6 +16,7 @@ class CreateGroupsTable extends Migration
             $table->increments('id');
             $table->integer('offer_id')->unsgined();
             $table->string('name');
+            $table->integer('max_users')->default(0);
             $table->timestamps();
         });
     }

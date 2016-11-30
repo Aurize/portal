@@ -14,4 +14,5 @@ Route::get('/home', function () {
 Route::resource('admins', 'AdminController');
 
 
-Route::resource('rates', 'RateController');
+//Route::resource('rates', 'RateController');
+Route::resource('offers', 'OfferController');

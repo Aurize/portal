@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Rate extends Model
+class Review extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -15,6 +15,7 @@ class Rate extends Model
         'offer_id',
         'title',
         'comment',
+        'rate'
     ];
 
     public function place()
